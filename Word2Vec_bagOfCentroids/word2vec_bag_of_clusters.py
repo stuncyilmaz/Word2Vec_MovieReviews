@@ -1,3 +1,15 @@
+__author__ = "Sandeep"
+
+#####################################################
+"""
+	Code to generate word2vec based clusters and obtain
+	corresponding bag of centroids for each review.
+	These bag of centroids are used for Random forests based 
+	sentiment analysis.
+"""
+######################################################
+
+
 import pandas as pd
 import numpy as np
 import nltk
@@ -65,6 +77,7 @@ def review_to_sentences( review, tokenizer, remove_stopwords=False ):
 	# Return the list of sentences (each sentence is a list of words,
 	# so this returns a list of lists
 	return sentences
+
 
 def create_bag_of_centroids( wordlist, word_centroid_map, tfidf_scores ):
 	#
